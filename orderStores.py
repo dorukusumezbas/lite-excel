@@ -1,5 +1,6 @@
 import numpy
 import requests
+import json
 
 def main(sessionID, client):
 
@@ -33,7 +34,7 @@ def main(sessionID, client):
 
         """
     itemStoreOrders = requests.get(link + sessionID + linkcont)
-    itemStoreOrder = itemStoreOrders.json()
+    itemStoreOrder = json.loads(itemStoreOrders.text)
 
     # this part processes json data to array of arrays using numpy.
     a = numpy.empty((5000, 15), dtype=object)
@@ -49,8 +50,15 @@ def main(sessionID, client):
         index = index + 1
 
     # this part pastes gsheet with related data.
+
     sheet = client.open_by_key("1eELo_AJ7hFLWfXxbU3i87KxnEbOgdIU4vvKVpcxS3Wo").worksheet("Magaza Siparis")
-    cell_list = sheet.range('A2:G' + str(index))
+
+    clear_cell_list = sheet.range("A2:D5000")
+    for cell in clear_cell_list:
+        cell.value = ""
+    sheet.update_cells(clear_cell_list, value_input_option='USER_ENTERED')
+
+    cell_list = sheet.range('A2:D' + str(index))
     for cell in cell_list:
-        cell.value = a[(cell.row - 1)][(cell.col - 1)]
+        cell.value = a[(cell.row - 2)][(cell.col - 1)]
     sheet.update_cells(cell_list, value_input_option='USER_ENTERED')
