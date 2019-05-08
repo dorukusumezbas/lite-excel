@@ -1,5 +1,3 @@
-#! /usr/bin/python3
-
 import authGoogle
 import authNebim
 import orderStores
