@@ -5,8 +5,9 @@ import authNebim
 import orderStores
 import orderWholesale
 import products
-import schedule
-import time
+import datetime
+
+print(datetime.datetime.now().strftime("%a, %d %B %Y %H:%M:%S"))
 
 def main():
     sessionID = authNebim.main()
@@ -15,8 +16,5 @@ def main():
     orderWholesale.main(sessionID, client)
     products.main(sessionID, client)
 
+print(datetime.datetime.now().strftime("%a, %d %B %Y %H:%M:%S") + " ended")
 main()
-
-while True:
-    schedule.run_pending()
-    time.sleep(60)
