@@ -1,3 +1,5 @@
+import sys
+sys.path.insert(0,'/home/ubuntu/projects/lite-excel')
 from oauth2client.service_account import ServiceAccountCredentials
 import gspread
 
