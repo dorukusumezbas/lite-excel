@@ -1,5 +1,5 @@
 import sys
-sys.path.insert(0,'/projects/lite-excel/')
+sys.path.insert(0,'/Projects/lite-excel/')
 from oauth2client.service_account import ServiceAccountCredentials
 import gspread
 
