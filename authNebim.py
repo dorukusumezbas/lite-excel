@@ -1,5 +1,5 @@
 import sys
-sys.path.insert(0,'/home/ubuntu/projects/lite-excel')
+sys.path.insert(0,'/ubuntu/projects/lite-excel/')
 import requests
 
 def main():
