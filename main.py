@@ -16,8 +16,6 @@ def main():
     products.main(sessionID, client)
 
 main()
-schedule.every().hour.do(main)
-print("scheduled")
 
 while True:
     schedule.run_pending()
