@@ -6,44 +6,57 @@ import json
 
 def main(sessionID, client):
 
+    print("Ürün güncelleme başladı. \n")
+
     link = """http://188.132.229.74:9090/(S("""
     linkProducts = """))/IntegratorService/RunProc?{
     "ProcName": "sp_OnlyItemAndColor",
     "Parameters": [
-    {
-    "Name": "CollectionCode1",
-    "Value": "9Y3"
-    },
-    {
-    "Name": "CollectionCode2",
-    "Value": "9Y2"
-    },
-    {
-    "Name": "CollectionCode3",
-    "Value": "9Y1"
-    }
+        {
+        "Name": "CollectionCode1",
+        "Value": "9Y1"
+        },
+        {
+        "Name": "CollectionCode2",
+        "Value": "9Y2"
+        },
+        {
+        "Name": "CollectionCode3",
+        "Value": "9Y3"
+        },
+        {
+        "Name": "CollectionCode4",
+        "Value": "BAST"
+        }
     ]
     }
     """
+    print("Ürün sorgusu  NEBİM'den başarılı döndü. \n")
 
     linkKunye = """))/IntegratorService/RunProc?{
     "ProcName": "sp_ItemInfo",
     "Parameters": [
     {
     "Name": "CollectionCode1",
-    "Value": "9Y3"
-    },
-    {
-    "Name": "CollectionCode2",
     "Value": "9Y1"
     },
     {
-    "Name": "CollectionCode3",
+    "Name": "CollectionCode2",
     "Value": "9Y2"
+    },
+    {
+    "Name": "CollectionCode3",
+    "Value": "9Y3"
+    },
+    {
+    "Name": "CollectionCode4",
+    "Value": "BAST"
     }
     ]
     }
     """
+    print("Künye sorgusu NEBİM'den başarılı döndü.  \n")
+
     #pulls sku-renk
     itemInfo =requests.get(link + sessionID + linkProducts)
     itemInfoResponse = json.loads(itemInfo.text)
@@ -158,3 +171,4 @@ def main(sessionID, client):
     for cell in cell_list:
         cell.value = a[(cell.row - 2)][(cell.col - 1)]
     sheet.update_cells(cell_list, value_input_option='USER_ENTERED')
+    print("Ürün Bilgileri Güncellendi. \n")

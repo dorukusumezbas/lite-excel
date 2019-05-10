@@ -5,6 +5,7 @@ import authNebim
 import orderStores
 import orderWholesale
 import products
+import productionInfo
 import datetime
 
 
@@ -12,9 +13,11 @@ import datetime
 def main():
     sessionID = authNebim.main()
     client = authGoogle.main()
+    productionInfo.main(sessionID, client)
     orderStores.main(sessionID, client)
     orderWholesale.main(sessionID, client)
     products.main(sessionID, client)
-print(datetime.datetime.now().strftime("%a, %d %B %Y %H:%M:%S"))
+
+print("\n" + datetime.datetime.now().strftime("%a, %d %B %Y %H:%M:%S"))
 main()
-print(datetime.datetime.now().strftime("%a, %d %B %Y %H:%M:%S") + " ended")
+print("\n" + datetime.datetime.now().strftime("%a, %d %B %Y %H:%M:%S") + " ended")

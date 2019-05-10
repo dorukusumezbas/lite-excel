@@ -5,7 +5,7 @@ import requests
 import json
 
 def main(sessionID, client):
-
+    print("Toptan satış adetleri güncelleme başladı. \n")
     link = """http://188.132.229.74:9090/(S("""
     linkcont = """))/IntegratorService/RunProc?{
         "ProcName": "sp_ItemOrderInfo",
@@ -24,7 +24,7 @@ def main(sessionID, client):
         },
         {
         "Name": "CollectionCode1",
-        "Value": "9Y3"
+        "Value": "9Y1"
         },
         {
         "Name": "CollectionCode2",
@@ -32,7 +32,11 @@ def main(sessionID, client):
         },
         {
         "Name": "CollectionCode3",
-        "Value": "9Y1"
+        "Value": "9Y3"
+        },
+        {
+        "Name": "CollectionCode4",
+        "Value": "BAST"
         }
         ]
         }
@@ -40,7 +44,7 @@ def main(sessionID, client):
         """
     itemOrder = requests.get(link + sessionID + linkcont)
     itemOrderResponse = json.loads(itemOrder.text)
-
+    print("Toptan satış adetleri sorgusu NEBİM'den başarılı döndü. \n")
     # this part processes json data to array of arrays using numpy.
     a = numpy.empty((5000, 15), dtype=object)
     a[:] = ''
@@ -65,3 +69,4 @@ def main(sessionID, client):
     for cell in cell_list:
         cell.value = a[(cell.row - 2)][(cell.col - 1)]
     sheet.update_cells(cell_list, value_input_option='USER_ENTERED')
+    print("Toptan satış adetleri güncellendi.\n")
