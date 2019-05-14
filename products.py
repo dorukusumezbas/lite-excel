@@ -68,9 +68,14 @@ def main(sessionID, client):
     #counts asorti, adds AsortiCount prop to kunye json
     for item in kunyeResponse:
         asorti = item["LotDesc"]
-        asortiList = asorti.split("-")
-        asortiCount = len(asortiList)
-        item["AsortiCount"] = asortiCount
+        if asorti == "":
+            item["AsortiCount"] = 1
+        else:
+            asortiCount = 0
+            asortiList = asorti.split("//")
+            for asortiEntry in asortiList:
+                asortiCount = asortiCount + int(asortiEntry[-1])
+            item["AsortiCount"] = asortiCount
 
     # this part processes json data to array of arrays using numpy. - SKU & Asorticount
     b = numpy.empty((5000,2), dtype=object)
