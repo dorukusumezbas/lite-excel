@@ -52,7 +52,7 @@ def main(sessionID, client):
     for item in productionInfo:
         sku = item["ItemCode"]
         color = item["ColorDescription"]
-        qty = item["Qty1"]
+        qty = item["Qty1"] - item["CancelQty1"]
         shipmentQty = item["ShipmentQty1"]
         isFound = False
         for element in refactoredArray:
