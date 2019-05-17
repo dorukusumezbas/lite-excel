@@ -106,20 +106,42 @@ def main(sessionID, client):
     # this part processes json data to array of arrays using numpy.
     a = numpy.empty((5000, 15), dtype=object)
     a[:] = ''
+
+    iptalmatris = numpy.empty((5000, 15), dtype=object)
+    iptalmatris[:] = ''
+
     global index
     index = 0
+    global iptalIndex
+    iptalIndex = 0
     for item in itemInfoResponse:
-        a[index][0] = item["ItemCode"]
-        a[index][1] = item["ColorDesc"]
-        try:
-            a[index][2] = item["SeriKesimAdet"]
-        except KeyError:
-            print("keyerror")
-        try:
-            a[index][3] = item["Not"]
-        except KeyError:
-            print("keyerror")
-        index = index + 1
+        if item["IsBlocked"] == False:
+            a[index][0] = item["ItemCode"]
+            a[index][1] = item["ColorDesc"]
+            index = index + 1
+            try:
+                a[index][2] = item["SeriKesimAdet"]
+            except KeyError:
+                print("keyerror")
+            try:
+                a[index][3] = item["Not"]
+            except KeyError:
+                print("keyerror")
+        else:
+            iptalmatris[iptalIndex][0] = item['ItemCode']
+            iptalmatris[iptalIndex][1] = item['ColorDesc']
+            iptalIndex = iptalIndex + 1
+
+    iptalWorkSheet = client.open_by_key("1nodf_m9xd7jRcRRIx_CvS3VNjNTUAau_mpz7dTUfzFY").worksheet("İptal Ürünler")
+    iptalCells = iptalWorkSheet.range("A2:B5000")
+    for cell in iptalCells:
+        cell.value = ""
+    iptalWorkSheet.update_cells(iptalCells, value_input_option = 'USER_ENTERED')
+
+    iptalCellsUpdate = iptalWorkSheet.range("A2:B" + str(iptalIndex + 1))
+    for cell in iptalCellsUpdate:
+        cell.value = iptalmatris[cell.row -2][cell.col -1]
+    iptalWorkSheet.update_cells(iptalCellsUpdate, value_input_option= 'USER_ENTERED')
 
     clear_cell_list3 = worksheet.range("A5:B5000")
     for cell in clear_cell_list3:
