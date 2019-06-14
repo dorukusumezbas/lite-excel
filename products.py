@@ -3,6 +3,8 @@ sys.path.insert(0,'/Projects/lite-excel/')
 import numpy
 import requests
 import json
+from natsort import natsorted
+from operator import itemgetter
 
 def main(sessionID, client):
 
@@ -91,6 +93,7 @@ def main(sessionID, client):
 
     worksheet = client.open_by_key("1nodf_m9xd7jRcRRIx_CvS3VNjNTUAau_mpz7dTUfzFY").worksheet("Sipariş-Üretim")
     values = worksheet.get_all_values()
+
     for row in values:
         rowSku = row[0]
         rowRenk = row[1]
@@ -114,6 +117,7 @@ def main(sessionID, client):
     index = 0
     global iptalIndex
     iptalIndex = 0
+    itemInfoResponse = natsorted(itemInfoResponse, key=itemgetter(*['ItemCode']))
     for item in itemInfoResponse:
         if item["IsBlocked"] == False:
             a[index][0] = item["ItemCode"]
