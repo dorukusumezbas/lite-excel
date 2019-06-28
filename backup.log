@@ -1,0 +1,102 @@
+{'ModelType': 0, 'Status': 'Connection Created Successfully', 'StatusCode': 198, 'SessionID': 'zglgbw3fvg53nrforqlu5x5u'}
+zglgbw3fvg53nrforqlu5x5u
+{'UserGroupCode': 'Pt', 'UserName': 'Softify', 'DatabaseName': 'V3_Touche', 'LangCode': 'TR', 'DataLangCode': 'TR', 'RecordInfo': 'Pt   Softify', 'IsOfficeUser': False, 'IsStoreUser': False, 'IsWarehouseUser': False, 'CompanyCode': 1, 'OfficeCode': 'W-01', 'StoreCode': '', 'WarehouseCode': '1-2-8'}
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/lite-excel/main.py", line 16, in <module>
+    main()
+  File "/home/ubuntu/Projects/lite-excel/main.py", line 11, in main
+    client = authGoogle.main()
+  File "/home/ubuntu/Projects/lite-excel/authGoogle.py", line 6, in main
+    creds = ServiceAccountCredentials.from_json_keyfile_name('client_secret.json', scope)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/oauth2client/service_account.py", line 219, in from_json_keyfile_name
+    with open(filename, 'r') as file_obj:
+FileNotFoundError: [Errno 1sd] No such file or directory: 'client_secret.json'
+{'ModelType': 0, 'Status': 'Connection Created Successfully', 'StatusCode': 200, 'SessionID': '4xwsigbfnmfjaqffhhcsbzgv'}
+4xwsigbfnmfjaqffhhcsbzgv
+{'UserGroupCode': 'Pt', 'UserName': 'Softify', 'DatabaseName': 'V3_Touche', 'LangCode': 'TR', 'DataLangCode': 'TR', 'RecordInfo': 'Pt   Softify', 'IsOfficeUser': False, 'IsStoreUser': False, 'IsWarehouseUser': False, 'CompanyCode': 1, 'OfficeCode': 'W-01', 'StoreCode': '', 'WarehouseCode': '1-2-8'}
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/lite-excel/main.py", line 16, in <module>
+    main()
+  File "/home/ubuntu/Projects/lite-excel/main.py", line 11, in main
+    client = authGoogle.main()
+  File "/home/ubuntu/Projects/lite-excel/authGoogle.py", line 6, in main
+    creds = ServiceAccountCredentials.from_json_keyfile_name('client_secret.json', scope)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/oauth2client/service_account.py", line 219, in from_json_keyfile_name
+    with open(filename, 'r') as file_obj:
+FileNotFoundError: [Errno 2] No such file or directory: 'client_secret.json'
+{'ModelType': 0, 'Status': 'Connection Created Successfully', 'StatusCode': 200, 'SessionID': 'armtbklgctwf0nbibzdlbr23'}
+armtbklgctwf0nbibzdlbr23
+{'UserGroupCode': 'Pt', 'UserName': 'Softify', 'DatabaseName': 'V3_Touche', 'LangCode': 'TR', 'DataLangCode': 'TR', 'RecordInfo': 'Pt   Softify', 'IsOfficeUser': False, 'IsStoreUser': False, 'IsWarehouseUser': False, 'CompanyCode': 1, 'OfficeCode': 'W-01', 'StoreCode': '', 'WarehouseCode': '1-2-8'}
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/lite-excel/main.py", line 18, in <module>
+    main()
+  File "/home/ubuntu/Projects/lite-excel/main.py", line 13, in main
+    client = authGoogle.main()
+  File "/home/ubuntu/Projects/lite-excel/authGoogle.py", line 6, in main
+    creds = ServiceAccountCredentials.from_json_keyfile_name('client_secret.json', scope)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/oauth2client/service_account.py", line 219, in from_json_keyfile_name
+    with open(filename, 'r') as file_obj:
+FileNotFoundError: [Errno 2] No such file or directory: 'client_secret.json'
+{'ModelType': 0, 'Status': 'Connection Created Successfully', 'StatusCode': 200, 'SessionID': 'aqjtxb0pgk1vjkk5jmgjesmh'}
+aqjtxb0pgk1vjkk5jmgjesmh
+{'UserGroupCode': 'Pt', 'UserName': 'Softify', 'DatabaseName': 'V3_Touche', 'LangCode': 'TR', 'DataLangCode': 'TR', 'RecordInfo': 'Pt   Softify', 'IsOfficeUser': False, 'IsStoreUser': False, 'IsWarehouseUser': False, 'CompanyCode': 1, 'OfficeCode': 'W-01', 'StoreCode': '', 'WarehouseCode': '1-2-8'}
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/lite-excel/main.py", line 18, in <module>
+    main()
+  File "/home/ubuntu/Projects/lite-excel/main.py", line 13, in main
+    client = authGoogle.main()
+  File "/home/ubuntu/Projects/lite-excel/authGoogle.py", line 8, in main
+    creds = ServiceAccountCredentials.from_json_keyfile_name('client_secret.json', scope)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/oauth2client/service_account.py", line 219, in from_json_keyfile_name
+    with open(filename, 'r') as file_obj:
+FileNotFoundError: [Errno 0] No such file or directory: 'client_secret.json'
+Thu, 09 May 2019 07:30:01
+Thu, 09 May 2019 07:30:01 ended
+{'ModelType': 0, 'Status': 'Connection Created Successfully', 'StatusCode': 200, 'SessionID': '2wuh2gu5fdhhwhsyrjn2015p'}
+2wuh2gu5fdhhwhsyrjn2015p
+{'UserGroupCode': 'Pt', 'UserName': 'Softify', 'DatabaseName': 'V3_Touche', 'LangCode': 'TR', 'DataLangCode': 'TR', 'RecordInfo': 'Pt   Softify', 'IsOfficeUser': False, 'IsStoreUser': False, 'IsWarehouseUser': False, 'CompanyCode': 1, 'OfficeCode': 'W-01', 'StoreCode': '', 'WarehouseCode': '1-2-8'}
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/lite-excel/main.py", line 20, in <module>
+    main()
+  File "/home/ubuntu/Projects/lite-excel/main.py", line 14, in main
+    client = authGoogle.main()
+  File "/home/ubuntu/Projects/lite-excel/authGoogle.py", line 8, in main
+    creds = ServiceAccountCredentials.from_json_keyfile_name('client_secret.json', scope)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/oauth2client/service_account.py", line 219, in from_json_keyfile_name
+    with open(filename, 'r') as file_obj:
+FileNotFoundError: [Errno 2] No such file or directory: 'client_secret.json'
+Thu, 09 May 2019 08:06:02
+Thu, 09 May 2019 08:06:02 ended
+{'ModelType': 0, 'Status': 'Connection Created Successfully', 'StatusCode': 200, 'SessionID': 'jpqyump3nuvvfts203lmghr4'}
+jpqyump3nuvvfts203lmghr4
+{'UserGroupCode': 'Pt', 'UserName': 'Softify', 'DatabaseName': 'V3_Touche', 'LangCode': 'TR', 'DataLangCode': 'TR', 'RecordInfo': 'Pt   Softify', 'IsOfficeUser': False, 'IsStoreUser': False, 'IsWarehouseUser': False, 'CompanyCode': 1, 'OfficeCode': 'W-01', 'StoreCode': '', 'WarehouseCode': '1-2-8'}
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/lite-excel/main.py", line 20, in <module>
+    main()
+  File "/home/ubuntu/Projects/lite-excel/main.py", line 14, in main
+    client = authGoogle.main()
+  File "/home/ubuntu/Projects/lite-excel/authGoogle.py", line 8, in main
+    creds = ServiceAccountCredentials.from_json_keyfile_name('client_secret.json', scope)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/oauth2client/service_account.py", line 219, in from_json_keyfile_name
+    with open(filename, 'r') as file_obj:
+FileNotFoundError: [Errno 2] No such file or directory: 'client_secret.json'
+Thu, 09 May 2019 08:12:01
+Thu, 09 May 2019 08:12:01 ended
+{'ModelType': 0, 'Status': 'Connection Created Successfully', 'StatusCode': 200, 'SessionID': 'i5sv31xshgpaqvg31f0t0bnp'}
+i5sv31xshgpaqvg31f0t0bnp
+{'UserGroupCode': 'Pt', 'UserName': 'Softify', 'DatabaseName': 'V3_Touche', 'LangCode': 'TR', 'DataLangCode': 'TR', 'RecordInfo': 'Pt   Softify', 'IsOfficeUser': False, 'IsStoreUser': False, 'IsWarehouseUser': False, 'CompanyCode': 1, 'OfficeCode': 'W-01', 'StoreCode': '', 'WarehouseCode': '1-2-8'}
+Traceback (most recent call last):
+  File "/home/ubuntu/Projects/lite-excel/main.py", line 20, in <module>
+    main()
+  File "/home/ubuntu/Projects/lite-excel/main.py", line 14, in main
+    client = authGoogle.main()
+  File "/home/ubuntu/Projects/lite-excel/authGoogle.py", line 8, in main
+    creds = ServiceAccountCredentials.from_json_keyfile_name('client_secret.json', scope)
+  File "/home/ubuntu/.local/lib/python3.6/site-packages/oauth2client/service_account.py", line 219, in from_json_keyfile_name
+    with open(filename, 'r') as file_obj:
+FileNotFoundError: [Errno 2] No such file or directory: 'client_secret.json'
+Thu, 09 May 2019 08:17:02
+Thu, 09 May 2019 08:17:02 ended
+{'ModelType': 0, 'Status': 'Connection Created Successfully', 'StatusCode': 200, 'SessionID': 'xfbziexfduwgm1so2tdd0t4w'}
+xfbziexfduwgm1so2tdd0t4w
+{'UserGroupCode': 'Pt', 'UserName': 'Softify', 'DatabaseName': 'V3_Touche', 'LangCode': 'TR', 'DataLangCode': 'TR', 'RecordInfo': 'Pt   Softify', 'IsOfficeUser': False, 'IsStoreUser': False, 'IsWarehouseUser': False, 'CompanyCode': 1, 'OfficeCode': 'W-01', 'StoreCode': '', 'WarehouseCode': '1-2-8'}
