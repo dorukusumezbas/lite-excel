@@ -122,7 +122,6 @@ def main(sessionID, client):
         if item["IsBlocked"] == False:
             a[index][0] = item["ItemCode"]
             a[index][1] = item["ColorDesc"]
-            index = index + 1
             try:
                 a[index][2] = item["SeriKesimAdet"]
             except KeyError:
@@ -131,6 +130,7 @@ def main(sessionID, client):
                 a[index][3] = item["Not"]
             except KeyError:
                 print("keyerror")
+            index = index + 1
         else:
             iptalmatris[iptalIndex][0] = item['ItemCode']
             iptalmatris[iptalIndex][1] = item['ColorDesc']
