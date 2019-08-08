@@ -19,14 +19,6 @@ def main(sessionID, client):
         "Value": "9K1"
         },
         {
-        "Name": "CollectionCode2",
-        "Value": "9Y2"
-        },
-        {
-        "Name": "CollectionCode3",
-        "Value": "9Y3"
-        },
-        {
         "Name": "CollectionCode4",
         "Value": "BAST"
         }
@@ -60,14 +52,13 @@ def main(sessionID, client):
     print("Künye sorgusu NEBİM'den başarılı döndü.  \n")
 
     #pulls sku-renk
-    itemInfo =requests.get(link + sessionID + linkProducts)
+    itemInfo = requests.get(link + sessionID + linkProducts)
     itemInfoResponse = json.loads(itemInfo.text)
 
     #pulls künye
     kunye = requests.get(link + sessionID + linkKunye)
     kunyeResponse = json.loads(kunye.text)
-
-    #counts asorti, adds AsortiCount prop to kunye json
+   #counts asorti, adds AsortiCount prop to kunye json
     for item in kunyeResponse:
         asorti = item["LotDesc"]
         if asorti == "":
@@ -135,17 +126,16 @@ def main(sessionID, client):
             iptalmatris[iptalIndex][0] = item['ItemCode']
             iptalmatris[iptalIndex][1] = item['ColorDesc']
             iptalIndex = iptalIndex + 1
-
     iptalWorkSheet = client.open_by_key("1nodf_m9xd7jRcRRIx_CvS3VNjNTUAau_mpz7dTUfzFY").worksheet("İptal Ürünler")
     iptalCells = iptalWorkSheet.range("A2:B5000")
     for cell in iptalCells:
         cell.value = ""
     iptalWorkSheet.update_cells(iptalCells, value_input_option = 'USER_ENTERED')
-
-    iptalCellsUpdate = iptalWorkSheet.range("A2:B" + str(iptalIndex + 1))
-    for cell in iptalCellsUpdate:
-        cell.value = iptalmatris[cell.row -2][cell.col -1]
-    iptalWorkSheet.update_cells(iptalCellsUpdate, value_input_option= 'USER_ENTERED')
+    if(iptalIndex>0):
+        iptalCellsUpdate = iptalWorkSheet.range("A2:B" + str(iptalIndex + 1))
+        for cell in iptalCellsUpdate:
+            cell.value = iptalmatris[cell.row -2][cell.col -1]
+        iptalWorkSheet.update_cells(iptalCellsUpdate, value_input_option= 'USER_ENTERED')
 
     clear_cell_list3 = worksheet.range("A5:B5000")
     for cell in clear_cell_list3:

@@ -14,7 +14,7 @@ def main(sessionID, client):
         "Parameters": [
         {
         "Name": "StartDate",
-        "Value": "2019-01-01"
+        "Value": "2019-07-01"
         },
         {
         "Name": "EndDate",
@@ -27,14 +27,6 @@ def main(sessionID, client):
         {
         "Name": "CollectionCode1",
         "Value": "9K1"
-        },
-        {
-        "Name": "CollectionCode2",
-        "Value": "9Y2"
-        },
-        {
-        "Name": "CollectionCode3",
-        "Value": "9Y3"
         },
         {
         "Name": "CollectionCode4",
