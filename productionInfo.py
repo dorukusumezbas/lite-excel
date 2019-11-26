@@ -26,6 +26,10 @@ def main(sessionID, client):
         },
         {
         "Name": "CollectionCode1",
+        "Value": "9K3"
+        },
+        {
+        "Name": "CollectionCode1",
         "Value": "9K1"
         },
         {

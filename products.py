@@ -19,6 +19,10 @@ def main(sessionID, client):
         "Value": "9K1"
         },
         {
+        "Name": "CollectionCode1",
+        "Value": "9K3"
+        },
+        {
         "Name": "CollectionCode4",
         "Value": "BAST"
         }
