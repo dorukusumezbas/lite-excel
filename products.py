@@ -36,15 +36,15 @@ def main(sessionID, client):
     "Parameters": [
     {
     "Name": "CollectionCode1",
-    "Value": "9Y1"
+    "Value": "9K1"
     },
     {
     "Name": "CollectionCode2",
-    "Value": "9Y2"
+    "Value": "9K2"
     },
     {
     "Name": "CollectionCode3",
-    "Value": "9Y3"
+    "Value": "9K3"
     },
     {
     "Name": "CollectionCode4",
