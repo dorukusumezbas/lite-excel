@@ -18,21 +18,9 @@ def main(sessionID, client):
         "Name": "EndDate",
         "Value": "2050-04-16"
         },
-        {
+	    {
         "Name": "OfficeCode",
         "Value": "M"
-        },
-        {
-        "Name": "CollectionCode1",
-        "Value": "9K1"
-        },
-        {
-        "Name": "CollectionCode1",
-        "Value": "9K3"
-        },
-        {
-        "Name": "CollectionCode4",
-        "Value": "BAST"
         }
         ]
         }

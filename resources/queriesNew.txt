@@ -1,0 +1,104 @@
+
+-------------------------------------------------------------
+order Whosale
+
+- Office code eklenmesi gerekiyor.
+
+RunProc?{
+        "ProcName": "sp_ItemOrderInfo",
+        "Parameters": [
+        {
+        "Name": "StartDate",
+        "Value": "2019-07-01"
+        },
+        {
+        "Name": "EndDate",
+        "Value": "2050-04-16"
+        },
+	{
+        "Name": "OfficeCode",
+        "Value": "M"
+        }
+        ]
+        }
+--------------------------------------------------------------
+
+productioninfo
+
+- Hata dönüyor. 
+
+RunProc?{
+        "ProcName": "sp_BPItemOrder",
+        "Parameters": [
+        {
+        "Name": "StartDate",
+        "Value": "2019-07-01"
+        },
+        {
+        "Name": "EndDate",
+        "Value": "2050-01-01"
+        },
+        {
+        "Name": "ProcessCode",
+        "Value": "BP"
+        }
+        ]
+        }
+
+--------------------------------------------------------------
+
+Künye sorgusu
+
+- Çalışıyor.
+
+RunProc?{
+    "ProcName": "sp_ItemInfo",
+    "Parameters": [
+        {
+        "Name": "StartDate",
+        "Value": "2019-07-01"
+        },
+        {
+        "Name": "EndDate",
+        "Value": "2050-01-01"
+        }
+    ]
+    }
+
+---------------------------------------------------------------------
+Product sorgu
+
+- Çalışıyor.
+
+
+RunProc?{
+    "ProcName": "sp_OnlyItemAndColor",
+    "Parameters": [
+        {
+        "Name": "StartDate",
+        "Value": "2019-09-01"
+        },
+        {
+        "Name": "EndDate",
+        "Value": "2050-09-01"
+        }
+    ]
+    }
+---------------------------------------------------------------------
+Order Stores
+
+- Çalışıyor.
+
+RunProc?{
+        "ProcName": "sp_ItemStoreOrderInfo",
+        "Parameters": [
+        {
+        "Name": "StartDate",
+        "Value": "2019-07-01"
+        },
+        {
+        "Name": "EndDate",
+        "Value": "2050-04-16"
+        }
+        ]
+        }

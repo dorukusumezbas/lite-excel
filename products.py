@@ -15,16 +15,12 @@ def main(sessionID, client):
     "ProcName": "sp_OnlyItemAndColor",
     "Parameters": [
         {
-        "Name": "CollectionCode1",
-        "Value": "9K1"
+        "Name": "StartDate",
+        "Value": "2019-09-01"
         },
         {
-        "Name": "CollectionCode1",
-        "Value": "9K3"
-        },
-        {
-        "Name": "CollectionCode4",
-        "Value": "BAST"
+        "Name": "EndDate",
+        "Value": "2050-09-01"
         }
     ]
     }
@@ -34,22 +30,14 @@ def main(sessionID, client):
     linkKunye = """))/IntegratorService/RunProc?{
     "ProcName": "sp_ItemInfo",
     "Parameters": [
-    {
-    "Name": "CollectionCode1",
-    "Value": "9K1"
-    },
-    {
-    "Name": "CollectionCode2",
-    "Value": "9K2"
-    },
-    {
-    "Name": "CollectionCode3",
-    "Value": "9K3"
-    },
-    {
-    "Name": "CollectionCode4",
-    "Value": "BAST"
-    }
+        {
+        "Name": "StartDate",
+        "Value": "2019-07-01"
+        },
+        {
+        "Name": "EndDate",
+        "Value": "2050-01-01"
+        }
     ]
     }
     """
